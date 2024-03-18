@@ -1,9 +1,53 @@
 {% extends 'layout.html' %}
 
-{% block title %}
-    About me
-{% endblock %}
+{% block title %}About me{% endblock %}
 
 {% block content %}
-    <h2>About me</h2>
+    {% load static %}
+    <head>
+        <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    </head>
+    <div>
+        <h2>Introduccion personal</h2>
+        <p>
+            Soy Uriel Gerardo Martinez Segura, soy ingeniero en sistemas computacionales especializado
+            en el desarrollo python
+        </p>
+        <p>
+            Una breve presentación que incluya tu nombre, profesión o título y una línea sobre
+            tu enfoque o especialización profesional.
+        </p>
+    </div>
+    <div>
+        <h2>Experiencia Profesional</h2>
+        <p>
+            Un resumen de tu experiencia laboral relevante, enfocado en roles, proyectos o
+            logros que destacan tus habilidades y contribuciones significativas. Intenta cuantificar
+            tus logros si es posible.
+        </p>
+    </div>
+    <div>
+        <h2>Educación y formación</h2>
+        <p>
+            Detalles sobre tu educación formal, certificaciones o cursos especializados
+            relevantes para tu campo de trabajo.
+        </p>
+    </div>
+    <div>
+        <h2>Habilidades y Competencias</h2>
+        <p>
+            Una lista de tus habilidades técnicas, blandas y cualquier otro tipo de
+            habilidades que sean pertinentes a tu área de especialización. Esto puede
+            incluir habilidades de software, habilidades analíticas, liderazgo, trabajo
+            en equipo, entre otros.
+        </p>
+    </div>
+    <div>
+        <h2>Objetivos profesionales</h2>
+        <p>
+            Tus aspiraciones o metas profesionales a corto o largo plazo. Esto puede ayudar
+            a los posibles empleadores o clientes a entender hacia dónde te diriges en tu carrera.
+        </p>
+    </div>
+
 {% endblock %}

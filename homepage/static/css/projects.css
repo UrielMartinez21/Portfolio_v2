@@ -1,0 +1,9 @@
+h2, h4, p {
+    color: white;
+}
+
+.container img {
+    width: 20vh;
+    height: 20vh;
+    margin-top: 1.2vw;
+}
