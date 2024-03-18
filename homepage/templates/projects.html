@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Projects
+{% endblock %}
+
+{% block content %}
+    <h2>My projects</h2>
+    <div>
+        {% for project in projects %}
+            {{ project.title }}
+            {{ project.description }}
+            {{ project.url }}
+            <img src="{{ project.image.url }}" alt="{{ project.title }}">
+        {% endfor %}
+    </div>
+{% endblock %}

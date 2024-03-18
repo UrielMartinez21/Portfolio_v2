@@ -1,0 +1,101 @@
+/* For all document */
+
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Rubik+Iso&display=swap');
+
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* For all body */
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #202020;
+    font-family: 'Fuzzy Bubbles', cursive;
+}
+
+.content-wrap {
+    flex: 1;
+    text-align: center;
+}
+
+/* For the header */
+
+.header {
+    width: 100%;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+.navbar li {
+    padding: 0 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #F8F1E5;
+}
+
+.navbar a:hover {
+    color: #feda4e;
+}
+
+.navbar a.active {
+    color: #feda4e;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* For the footer */
+
+.footer {
+    color: #F8F1E5;
+    text-align: center;
+}
+
+/* Styles for small screens (less than 600px) */
+@media (max-width: 600px) {
+    .header, .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer {
+        padding: 1vw;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar li {
+        padding: 1vw 0;
+    }
+
+    body {
+        margin: 5%;
+    }
+}
+
+/* Styles for medium screens (600px to 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+    body {
+        margin: 2% 5%;
+    }
+
+}

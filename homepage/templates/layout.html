@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/layout.css' %}">
+</head>
+<body>
+    <div class="content-wrap">
+        <header class="header">
+            <nav>
+                <ul class="navbar">
+{#                    <li><a href="{% url 'home' %}">Home</a></li>#}
+                    <li><a href="{% url 'home' %}" class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}">Home</a></li>
+                    <li><a href="{% url 'about' %}" class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}">About me</a></li>
+                    <li><a href="{% url 'projects' %}" class="{% if request.resolver_match.url_name == 'projects' %}active{% endif %}">Projects</a></li>
+                    <li><a href="#">CV</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div>
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+
+    <footer class="footer">
+      <p>&copy; 2024 Portfolio - Django - By Uriel Martinez </p>
+    </footer>
+
+</body>
+</html>

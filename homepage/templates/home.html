@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    {% load static %}
+    <head>
+        <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    </head>
+    <main>
+        <h1 class="class-name">Uriel Martinez</h1>
+        <h2 class="job">Python Developer</h2>
+        <p class="content">
+            As a Python programming professional, I deeply enjoy the continuous journey of
+            learning and discovery. My passion for knowledge drives me to pursue challenging
+            and enriching roles, allowing me to leverage and expand my extensive skill set and
+            knowledge base. My role as a developer transcends mere code creation; I am dedicated
+            to making a meaningful impact, fostering change, and aiding in the development of
+            technologies that aim to improve our world.
+        </p>
+    </main>
+
+    <div class="to-do">
+        <div class="title-activity">What I Do</div>
+        <div class="show-activities">
+            {% for activity in  activities %}
+            	<div class="content-activity">
+                    <img src="{{ activity.image.url }}">
+                    <h3>{{ activity.title }}</h3>
+                    <p>{{ activity.description }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

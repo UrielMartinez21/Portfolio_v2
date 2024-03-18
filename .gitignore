@@ -1,0 +1,3 @@
+# Lista de archivos a ignorar
+.venv
+.idea
