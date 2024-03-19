@@ -7,47 +7,60 @@
     <head>
         <link rel="stylesheet" href="{% static 'css/about.css' %}">
     </head>
-    <div>
-        <h2>Introduccion personal</h2>
-        <p>
-            Soy Uriel Gerardo Martinez Segura, soy ingeniero en sistemas computacionales especializado
-            en el desarrollo python
-        </p>
-        <p>
-            Una breve presentación que incluya tu nombre, profesión o título y una línea sobre
-            tu enfoque o especialización profesional.
-        </p>
-    </div>
-    <div>
-        <h2>Experiencia Profesional</h2>
-        <p>
-            Un resumen de tu experiencia laboral relevante, enfocado en roles, proyectos o
-            logros que destacan tus habilidades y contribuciones significativas. Intenta cuantificar
-            tus logros si es posible.
-        </p>
-    </div>
-    <div>
-        <h2>Educación y formación</h2>
-        <p>
-            Detalles sobre tu educación formal, certificaciones o cursos especializados
-            relevantes para tu campo de trabajo.
-        </p>
-    </div>
-    <div>
-        <h2>Habilidades y Competencias</h2>
-        <p>
-            Una lista de tus habilidades técnicas, blandas y cualquier otro tipo de
-            habilidades que sean pertinentes a tu área de especialización. Esto puede
-            incluir habilidades de software, habilidades analíticas, liderazgo, trabajo
-            en equipo, entre otros.
-        </p>
-    </div>
-    <div>
-        <h2>Objetivos profesionales</h2>
-        <p>
-            Tus aspiraciones o metas profesionales a corto o largo plazo. Esto puede ayudar
-            a los posibles empleadores o clientes a entender hacia dónde te diriges en tu carrera.
-        </p>
-    </div>
+    <main>
+        <div>
+            <h2>Self Description</h2>
+            {% for personal in personals %}
+                <div class="container">
+                    <div>
+                        <img src="{{ personal.image.url }}" alt="{{ personal.title }}">
+                    </div>
+                    <div>
+                        <h3>{{ personal.title }}</h3>
+                        <p>{{ personal.description }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div>
+            <h2>Education</h2>
+            {% for education in educations %}
+                <div class="container">
+                    <div>
+                        <img src="{{ education.image.url }}" alt="{{ education.title }}">
+                    </div>
+                    <div>
+                        <h3>{{ education.title }}</h3>
+                        <p>{{ education.description }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div>
+            <h2>Experience</h2>
+            {% for job in jobs %}
+                <div class="container">
+                    <h3>{{ job.title }}</h3>
+                    <p>{{ job.description }}</p>
+                </div>
+            {% endfor %}
+        </div>
+        <div>
+            <h2>Skills</h2>
+            {% for skill in skills %}
+                <ul class="container">
+                    <li>{{ skill.title }}</li>
+                </ul>
+            {% endfor %}
+        </div>
+        <div>
+            <h2>Career goals</h2>
+            {% for career in careers %}
+                <ul class="container">
+                    <li>{{ career.title }}</li>
+                </ul>
+            {% endfor %}
+        </div>
+    </main>
 
 {% endblock %}

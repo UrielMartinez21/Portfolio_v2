@@ -1,3 +1,26 @@
-h2, p {
+main {
+    margin: 0 22%;
+}
+
+h2, h3, p, li {
     color: white;
 }
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    margin: 5vh;
+}
+
+.container p {
+    text-align: justify;
+    margin: 0 5vh 0 5vh;
+}
+
+img {
+    width: 40vh;
+    height: 40vh;
+    margin-top: 1.2vw;
+    border-radius: 1vh;
+}
+
