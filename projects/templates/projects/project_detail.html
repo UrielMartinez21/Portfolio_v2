@@ -1,0 +1,33 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - {{ project.title }}</title>
+    <link rel="stylesheet" href="{% static 'css/project_detail.css' %}">
+</head>
+<body>
+    <main class="content-wrap">
+        <h1>{{ project.title }}</h1>
+        <div class="general-container">
+            <div class="project-container">
+                <img src="{{ project.image.url }}" alt="{{ project.title }}">
+                <div>
+                    {% for text in project.explanation %}
+                    <p>{{ text }}</p>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="link-container">
+                <a href="{% url 'projects:projects' %}" class="link-red">Back</a>
+                <a href="{{ project.url }}" class="link-blue">View Project</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+      <p>&copy; 2024 Portfolio - Django - By Uriel Martinez </p>
+    </footer>
+</body>
+</html>

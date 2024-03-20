@@ -17,14 +17,14 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
+from homepage.views import home, about_me
 
-from homepage.views import home, about_me, projects
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),
     path('about_me/', about_me, name='about'),
-    path('projects/', projects, name='projects'),
+    path('projects/', include('projects.urls')),
 ]
 
 # --> Para que Django sirva los archivos estáticos en modo DEBUG

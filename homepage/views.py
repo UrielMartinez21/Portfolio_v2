@@ -1,7 +1,6 @@
 from django.shortcuts import render
 
 from homepage.models import Activity, Description
-from projects.models import Project
 
 
 def home(request):
@@ -28,9 +27,3 @@ def about_me(request):
     }
 
     return render(request, 'about_me.html', info)
-
-
-def projects(request):
-    # Obtener todos los proyectos
-    all_projects = Project.objects.all()
-    return render(request, 'projects.html', {'projects': all_projects})

@@ -15,7 +15,7 @@
                 <ul class="navbar">
                     <li><a href="{% url 'home' %}" class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}">Home</a></li>
                     <li><a href="{% url 'about' %}" class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}">About me</a></li>
-                    <li><a href="{% url 'projects' %}" class="{% if request.resolver_match.url_name == 'projects' %}active{% endif %}">Projects</a></li>
+                    <li><a href="{% url 'projects:projects' %}" class="{% if request.resolver_match.url_name == 'projects' %}active{% endif %}">Projects</a></li>
                     <li><a href="{% static 'pdf/CV-Python.pdf' %}">CV</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>

@@ -1,9 +1,48 @@
-h2, h4, p {
+h2 {
     color: white;
 }
 
+body {
+    overflow: hidden;
+}
+
+.container {
+    margin: 0 38vw;
+    padding: 0vh 0 1vh 0;
+    border-radius: 1.5vw;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container h3 {
+    margin-bottom: 0;
+}
+
 .container img {
-    width: 20vh;
-    height: 20vh;
-    margin-top: 1.2vw;
+    width: 40vh;
+    height: 40vh;
+    margin-bottom: 0;
+}
+
+.container p {
+    text-align: justify;
+    margin: 1.5vh 5vh 3vh;
+}
+
+.container button {
+    padding: 0.7vh 5vh;
+    margin-bottom: 1vw;
+    border-radius: 1vw;
+    background-color: #fdd94e;
+    color: black;
+    font-size: 1.5em;
+    border: none;
+    cursor: pointer;
+}
+
+.container a {
+    text-decoration: none;
+    color: black;
 }

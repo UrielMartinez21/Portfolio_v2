@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Rubik+Iso&display=swap');
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* For all body */
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #202020;
+    color: white;
+    font-family: 'Fuzzy Bubbles', cursive;
+    overflow: hidden;
+}
+
+main {
+    margin: 0 9%;
+}
+
+img {
+    width: 40vh;
+    height: 40vh;
+    margin-top: 1.2vw;
+    border-radius: 20%;
+}
+
+.content-wrap {
+    flex: 1;
+    text-align: center;
+}
+
+.general-container {
+    background-color: white;
+    color: black;
+    border-radius: 2vw;
+    padding: 1vw 2vw 1vw 2vw;
+    margin-top: 0;
+}
+
+.project-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1vw 2vw 1vw 1vw;
+}
+
+.project-container p {
+    text-align: justify;
+}
+
+.link-container {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 1vw;
+}
+
+.link-container a {
+    width: 12vw;
+    height: 2.2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #F8F1E5;
+    text-decoration: none;
+}
+
+.link-red {
+    padding: 1vh 2vw 1vh 2vw;
+    border-radius: 1vw;
+    background-color: red;
+}
+
+.link-blue {
+    padding: 1vh 2vw 1vh 2vw;
+    border-radius: 1vw;
+    background-color: blue;
+}
+
+.footer {
+    color: #F8F1E5;
+    text-align: center;
+}
