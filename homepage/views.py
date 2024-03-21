@@ -17,6 +17,9 @@ def about_me(request):
     skills = Description.objects.filter(type='skills')
     career = Description.objects.filter(type='career')
 
+    for item in jobs:
+        print(item.image.url)
+
     # Create a dictionary with all the information
     info = {
         'educations': education,
