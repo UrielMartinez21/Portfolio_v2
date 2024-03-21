@@ -8,8 +8,8 @@
         <link rel="stylesheet" href="{% static 'css/about.css' %}">
     </head>
     <main>
+        <h2>Career path</h2>
         <div>
-            <h2>Self Description</h2>
             {% for personal in personals %}
                 <div class="container">
                     <div>
@@ -23,7 +23,6 @@
             {% endfor %}
         </div>
         <div>
-            <h2>Education</h2>
             {% for education in educations %}
                 <div class="container">
                     <div>
@@ -37,18 +36,18 @@
             {% endfor %}
         </div>
         <div>
-            <h2>Experience</h2>
+            <h2>Professional Experience</h2>
             {% for job in jobs %}
-                <div class="container">
+                <div class="work-container">
                     <h3>{{ job.title }}</h3>
                     <p>{{ job.description }}</p>
                 </div>
             {% endfor %}
         </div>
-        <div>
+        <div class="skills-container">
             <h2>Skills</h2>
             {% for skill in skills %}
-                <ul class="container">
+                <ul>
                     <li>{{ skill.title }}</li>
                 </ul>
             {% endfor %}

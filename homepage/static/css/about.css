@@ -1,14 +1,22 @@
+h2 {
+    color: white;
+}
+
+h3 {
+    text-decoration: underline;
+}
+
 main {
     margin: 0 22%;
 }
 
-h2, h3, p, li {
-    color: white;
-}
-
 .container {
+    background-color: white;
+    color: black;
+    border-radius: 2vh;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     margin: 5vh;
 }
 
@@ -17,10 +25,29 @@ h2, h3, p, li {
     margin: 0 5vh 0 5vh;
 }
 
-img {
+.container img {
     width: 40vh;
     height: 40vh;
-    margin-top: 1.2vw;
+    margin: 1.2vw;
     border-radius: 1vh;
 }
 
+.work-container {
+    background-color: white;
+    color: black;
+    border-radius: 2vh;
+    margin: 5vh;
+    padding: 2vh 5vh 2vh 5vh;
+}
+
+.work-container p {
+    text-align: justify;
+}
+
+.skills-container {
+    background-color: white;
+    color: black;
+    border-radius: 2vh;
+    margin: 5vh;
+    padding: 2vh 5vh 2vh 5vh;
+}
